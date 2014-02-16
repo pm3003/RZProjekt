@@ -24,5 +24,6 @@
 * Test der SQL Konfiguration mit einem Test-Webserver
 * Einrichten von Datenbank-Benutzern und Benutzergruppen.
 * Konfigurationsarbeiten beim Email Server (Horde)
+
 #### Woche vom 17. bis zum 22. Februar
 * Konfiguration des LDAP-Servers
