@@ -27,3 +27,5 @@
 
 #### Woche vom 17. bis zum 22. Februar
 * Konfiguration des LDAP-Servers
+    
+ 17.01.2014 : Der LDAP Server läuft jetzt auf 192.168.2.24. Der Verzeichnis ist so gut wie leer. Zu tun : Verzeichnis-Plan entwerfen. Auffüllung des Verzeichnisses mittels PHP webpage (auf den Testwebserver) oder manuell mit JXplorer (oder manuell mit command-line). Sicherheit des Verzeichnisses überprüfen (Access-control regeln überprüfen). Integration von Horde mit LDAP und SQL. Zentrale Authentifizeierungsschnittstelle im PHP entwerfen (angefangen auf den Testwebserver).
