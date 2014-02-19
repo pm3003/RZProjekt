@@ -50,7 +50,7 @@ Zur Lösung dieses Problem würde eine Überführung der Konfiguration von der C
 
 Addieren von User und Einteilung in Gruppen funktioniert, auch innerhalb von Horde.
 
- Zu tun : Erweiterung der Benutzerverwaltung-Möglichkeiten durch Benutzung von anderen Benutzerkonto-Typen und Gruppen-Typen. Dafür ist eine Änderung der LDAP-Konfiguration durch Intgration von neuen Schemas (isb horde.schema) notwendig, die aber nicht klappt. Überführung der Konfiguration von der Config Datei slapd.conf in den LDAP-Verzeichnis probieren. Einstellungen des aktuellen Webmail-Servers mit Team Mailserver absprechen und anpassen. Eventuell weitere Module von Horde an die Datenbanken anknüpfen. Proxy-Einstellungen ?
+ Zu tun : Erweiterung der Benutzerverwaltung-Möglichkeiten durch Benutzung von anderen Benutzerkonto-Typen und Gruppen-Typen. Dafür ist eine Änderung der LDAP-Konfiguration durch Intgration von neuen Schemas (isb horde.schema) notwendig, die aber nicht klappt. Überführung der Konfiguration von der Config Datei slapd.conf in den LDAP-Verzeichnis probieren. Einstellungen des aktuellen Webmail-Servers mit Team Mailserver absprechen und anpassen. Eventuell weitere Module von Horde an die Datenbanken anknüpfen. Patching der Horde php-Dateien (Hooks) absprechen. Proxy-Einstellungen ?
  
 * Einrichten eines weiteren Datenbank-Servers auf dbsvr3 zum Testen von Sicherheitsfunktionen.
 
