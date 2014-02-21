@@ -40,7 +40,7 @@
 	
 	Zu tun : Access-Control-Regeln für bestimmte Benutzer besser anpassen und vielleicht erweitern. 
 * Aufbau des Verzeichnisses im LDAP-Server
-* Einrichten eines Webmail-Servers mit Horde auf 192.168.2.27 :
+* Einrichten eines Webmail-Servers mit Horde, Dovecot (IMAP), Postfix (SMTP) auf 192.168.2.27 :
 
       *19.02.2014* :
 
@@ -70,11 +70,14 @@
       *21.02.2014* : Teil 1 (LDAP Übersicht) ist fertig, mit einem praktischen Beispiel aus dem HSU-Verzeichnis. Teil 2 und 3 müssen noch geschrieben werden.
       
 
-**Zu erledigen : Zusammenfassung** : 
+**Zu tun : Zusammenfassung** : 
 
 *LDAP Konfiguration :* Überführung der Konfiguration von der Config Datei slapd.conf in den LDAP-Verzeichnis; Erweiterte Access-Control Regeln (optional); neue Benutzerkontos einrichten;
+
 *Mailserver :* Konfiguration absprechen. Verknüpfung von Dovecot(IMAP), Postfix (SMTP), und IMP/Horde, insbesondere in der Benutzerverwaltung. LDAP-Integration von Postfix und Dovecot (erfordet einen zusätzlichen LDAP Server)?
+
 *Datenbank-Server :* Sicherheit-Einstellungen und Backup-Plan mit Team Security und Team Backup absprechen. Dementsprechend Replikation und TLS/https/Zertificate recherchieren.
+
 *Howto-Wikiseite:* Fertig schreiben, sobald Thomas mit den php-snippets fertig ist. Ähnliche Seite für SQL?
 
 #### Woche vom 22. bis zum 28. Februar
