@@ -39,9 +39,9 @@ ________________
     
       *17.02.2014* : 
       
-	Der LDAP Server läuft jetzt auf 192.168.2.24. Der Verzeichnis ist so gut wie leer.
+	*Der LDAP Server läuft jetzt auf 192.168.2.24. Der Verzeichnis ist so gut wie leer.*
 	
-	Zu tun : Verzeichnis-Plan entwerfen. Auffüllung des Verzeichnisses mittels PHP webpage (auf den Testwebserver) oder manuell mit JXplorer (oder manuell mit command-line). Sicherheit des Verzeichnisses überprüfen (Access-control regeln überprüfen). Integration von Horde mit LDAP und SQL. Zentrale Authentifizierungsschnittstelle im PHP entwerfen (angefangen auf denm Testwebserver).
+	*Zu tun : Verzeichnis-Plan entwerfen. Auffüllung des Verzeichnisses mittels PHP webpage (auf den Testwebserver) oder manuell mit JXplorer (oder manuell mit command-line). Sicherheit des Verzeichnisses überprüfen (Access-control regeln überprüfen). Integration von Horde mit LDAP und SQL. Zentrale Authentifizierungsschnittstelle im PHP entwerfen (angefangen auf denm Testwebserver).*
 
       *19.02.2014* : 
       
