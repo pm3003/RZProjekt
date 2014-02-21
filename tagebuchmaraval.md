@@ -47,7 +47,7 @@ ________________
       
 	*Access-Control-Regeln wurden angepasst. Thomas Bouchard schreibt die Authentifizierungsschnittstelle (basische Funktionen wie Suche und Prüfung von Benutzernamen hat er schon geschrieben) in der Form von PHP-Snippets. Integration von LDAP und mySQL mit Horde ist erfolgreich, aber nicht abgeschlossen.*
 	
-	*Zu tun : Access-Control-Regeln für bestimmte Benutzer besser anpassen und vielleicht erweitern. *
+	*Zu tun : Access-Control-Regeln für bestimmte Benutzer besser anpassen und vielleicht erweitern.*
 * Aufbau des Verzeichnisses im LDAP-Server
 * Einrichten eines Webmail-Servers mit Horde, Dovecot (IMAP), Postfix (SMTP) auf 192.168.2.27 :
 
@@ -67,7 +67,7 @@ ________________
 
       *19.02.2014* :
 
-	* Zu tun bzw zu untersuchen : Replikation (tutorial auf Youtube), Backup, Notfallplan beim Versagen der Horde-Installation oder des Datenbanks -> mit Team Backup bearbeiten. Proxy-Einstellungen ?*
+	*Zu tun bzw zu untersuchen : Replikation (tutorial auf Youtube), Backup, Notfallplan beim Versagen der Horde-Installation oder des Datenbanks -> mit Team Backup bearbeiten. Proxy-Einstellungen ?*
 	
 * Weiteren Datenbank für den Webserver erstellt. Weiterer user (webauftritt) mit dementsprechende Rechte auf den Webserver-Datenbanken. Wikiseite aktualisiert.
 * Beginn einer Wiki-Howto-Seite für LDAP
