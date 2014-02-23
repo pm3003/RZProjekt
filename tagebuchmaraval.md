@@ -79,7 +79,7 @@ ________________
 
 *LDAP Konfiguration :* Überführung der Konfiguration von der Config Datei slapd.conf in den LDAP-Verzeichnis; Erweiterte Access-Control Regeln (optional); neue Benutzerkontos einrichten;
 
-*Mailserver :* Konfiguration absprechen. Verknüpfung von Dovecot(IMAP), Postfix (SMTP), und IMP/Horde, insbesondere in der Benutzerverwaltung. LDAP-Integration von Postfix und Dovecot (erfordet einen zusätzlichen LDAP Server)?
+*Mailserver :* Konfiguration absprechen. Verknüpfung von Dovecot(IMAP), Postfix (SMTP), und IMP/Horde, insbesondere in der Benutzerverwaltung. LDAP-Integration von Postfix und Dovecot (erfordet einen zusätzlichen LDAP Server auf dbsvr3). Die Frage des Zugriffs von außen kann durch einen Apache-Proxy https -> http mit Firewall (DMZ) gelöst werden.
 
 *Datenbank-Server :* Sicherheit-Einstellungen und Backup-Plan mit Team Security und Team Backup absprechen. Dementsprechend Replikation und TLS/https/Zertificate recherchieren.
 
