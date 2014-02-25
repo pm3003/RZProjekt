@@ -7,18 +7,18 @@
 
 main.cf :
 
-alias_maps = hash:/etc/aliases, ldap:/etc/postfix/ldap/ldap-aliases.cf
-alias_database = hash:/etc/aliases
-
-virtual_alias_maps = ldap:/etc/postfix/ldap/virtual_aliases.cf
-virtual_mailbox_domains = ldap:/etc/postfix/ldap/virtual_domains.cf
-virtual_mailbox_maps = ldap:/etc/postfix/ldap/virtual_mailboxes.cf
-virtual_mailbox_base = /
-virtual_uid_maps = ldap:/etc/postfix/ldap/virtual_uid.cf
-virtual_gid_maps = ldap:/etc/postfix/ldap/virtual_gid.cf
-
-transport_maps = ldap:/etc/postfix/ldap/virtual_transport.cf
-relay_domains = ldap:/etc/postfix/ldap/virtual_relay.cf
+>alias_maps = hash:/etc/aliases, ldap:/etc/postfix/ldap/ldap->aliases.cf
+>alias_database = hash:/etc/aliases
+>
+>virtual_alias_maps = ldap:/etc/postfix/ldap/virtual_aliases.cf
+>virtual_mailbox_domains = >ldap:/etc/postfix/ldap/virtual_domains.cf
+>virtual_mailbox_maps = >ldap:/etc/postfix/ldap/virtual_mailboxes.cf
+>virtual_mailbox_base = /
+>virtual_uid_maps = ldap:/etc/postfix/ldap/virtual_uid.cf
+>virtual_gid_maps = ldap:/etc/postfix/ldap/virtual_gid.cf
+>
+>transport_maps = ldap:/etc/postfix/ldap/virtual_transport.cf
+>relay_domains = ldap:/etc/postfix/ldap/virtual_relay.cf
 
 Erstellung der obengenannten Dateien
 
@@ -31,16 +31,16 @@ Modifikation der /etc/postfix/main.cf
 
 Folgender Abschnitt muss in der main.cf erstellt werden. Einzelheiten zu diesen Optionen erfahren Sie im nächsten Abschnitt, der sich mit der Erstellung der angegebenen Dateien befasst, oder natürlich auf der ensprechenden MAN Page.
 
-virtual_alias_maps = ldap:/etc/postfix/ldap/virtual_aliases.cf
-virtual_mailbox_domains = ldap:/etc/postfix/ldap/virtual_domains.cf
-virtual_mailbox_maps = ldap:/etc/postfix/ldap/virtual_mailboxes.cf
-virtual_mailbox_base = /
-virtual_uid_maps = ldap:/etc/postfix/ldap/virtual_uid.cf
-virtual_gid_maps = ldap:/etc/postfix/ldap/virtual_gid.cf
-
-#TRANSPORT
-transport_maps = ldap:/etc/postfix/ldap/virtual_transport.cf
-relay_domains = ldap:/etc/postfix/ldap/virtual_relay.cf
+>virtual_alias_maps = ldap:/etc/postfix/ldap/virtual_aliases.cf
+>virtual_mailbox_domains = >ldap:/etc/postfix/ldap/virtual_domains.cf
+>virtual_mailbox_maps = >ldap:/etc/postfix/ldap/virtual_mailboxes.cf
+>virtual_mailbox_base = /
+>virtual_uid_maps = ldap:/etc/postfix/ldap/virtual_uid.cf
+>virtual_gid_maps = ldap:/etc/postfix/ldap/virtual_gid.cf
+>
+>#TRANSPORT
+>transport_maps = ldap:/etc/postfix/ldap/virtual_transport.cf
+>relay_domains = ldap:/etc/postfix/ldap/virtual_relay.cf
 
 #### Erstellung der Konfigurationen für den LDAP Zugriff
 
@@ -59,13 +59,13 @@ Ist der Wert nicht leer wird die Mail entsprechend weitergeleitet
 
 ##### Inhalt der Datei
 
-#virtual_aliases.cf
-server_host = localhost
-server_port = 389
-search_base = dc=testlab,dc=local
-query_filter = (|(mail=%s)(mailAlternateAddress=%s))
-result_attribute = mailForwardingAddress
-/etc/postfix/ldap/virtual_domains.cf
+>#virtual_aliases.cf
+>server_host = localhost
+>server_port = 389
+>search_base = dc=testlab,dc=local
+>query_filter = (|(mail=%s)(mailAlternateAddress=%s))
+>result_attribute = mailForwardingAddress
+>/etc/postfix/ldap/virtual_domains.cf
 
 ##### Beschreibung
 
@@ -77,13 +77,13 @@ Ist der Wert nicht leer akzeptiert Postfix Mails für diese Domäne
 
 ##### Inhalt der Datei
 
-#virtual_domains.cf
-server_host = localhost
-server_port = 389
-search_base = ou=Domains,dc=testlab,dc=local
-query_filter = (associatedDomain=%s)
-result_attribute = associatedDomain
-/etc/postfix/ldap/virtual_mailboxes.cf
+>#virtual_domains.cf
+>server_host = localhost
+>server_port = 389
+>search_base = ou=Domains,dc=testlab,dc=local
+>query_filter = (associatedDomain=%s)
+>result_attribute = associatedDomain
+>/etc/postfix/ldap/virtual_mailboxes.cf
 
 ##### Beschreibung
 
@@ -95,13 +95,14 @@ Ist der Wert nicht leer
 und wurde keine mailForwardingAddress gesetzt wird der Wert des Attributs als Pfad zum Maildir verwendet. 
 
 ##### Inhalt der Datei
-#virtual_mailboxes.cf
-server_host = localhost
-server_port = 389
-search_base = dc=testlab,dc=local
-query_filter = (|(mail=%s)(mailAlternateAddress=%s))
-result_attribute = mailMessageStore
-/etc/postfix/ldap/virtual_uid.cf
+
+>#virtual_mailboxes.cf
+>server_host = localhost
+>server_port = 389
+>search_base = dc=testlab,dc=local
+>query_filter = (|(mail=%s)(mailAlternateAddress=%s))
+>result_attribute = mailMessageStore
+>/etc/postfix/ldap/virtual_uid.cf
 
 ##### Beschreibung
 
@@ -113,13 +114,13 @@ Gibt den Wert des Attributs qmailUID zurück
 
 ##### Inhalt der Datei
 
-#virtual_uid.cf
-server_host = localhost
-server_port = 389
-search_base = dc=testlab,dc=local
-query_filter = (|(mail=%s)(mailAlternateAddress=%s))
-result_attribute = qmailUID
-/etc/postfix/ldap/virtual_gid.cf
+>#virtual_uid.cf
+>server_host = localhost
+>server_port = 389
+>search_base = dc=testlab,dc=local
+>query_filter = (|(mail=%s)(mailAlternateAddress=%s))
+>result_attribute = qmailUID
+>/etc/postfix/ldap/virtual_gid.cf
 
 ##### Beschreibung
 
@@ -133,13 +134,13 @@ Gibt den Wert des Attributs qmailGID zurück
 
 ##### Inhalt der Datei
 
-#virtual_gid.cf
-server_host = localhost
-server_port = 389
-search_base = dc=testlab,dc=local
-query_filter = (|(mail=%s)(mailAlternateAddress=%s))
-result_attribute = qmailGID
-/etc/postfix/ldap/virtual_transport.cf
+>#virtual_gid.cf
+>server_host = localhost
+>server_port = 389
+>search_base = dc=testlab,dc=local
+>query_filter = (|(mail=%s)(mailAlternateAddress=%s))
+>result_attribute = qmailGID
+>/etc/postfix/ldap/virtual_transport.cf
 
 ##### Beschreibung
 
@@ -153,13 +154,13 @@ Ist der Wert nicht leer verwendet Postfix diese Information für sein Routing.
 
 ##### Inhalt der Datei
 
-#virtual_transport
-server_host = localhost
-server_port = 389
-search_base = ou=forwardDomains,dc=testlab,dc=local
-query_filter = (associatedDomain=%s)
-result_attribute = destinationIndicator
-/etc/postfix/ldap/virtual_relay.cf
+>#virtual_transport
+>server_host = localhost
+>server_port = 389
+>search_base = ou=forwardDomains,dc=testlab,dc=local
+>query_filter = (associatedDomain=%s)
+>result_attribute = destinationIndicator
+>/etc/postfix/ldap/virtual_relay.cf
 
 ##### Beschreibung
 
@@ -172,15 +173,15 @@ Gibt den Wert des Attributs associatedDomain zurück
 
 ##### Inhalt der Datei
 
-#virtual_relay.cf
-server_host = localhost
-server_port = 389
-search_base = ou=forwardDomains,dc=testlab,dc=local
-query_filter = (associatedDomain=%s)
-result_attribute = associatedDomain
+>#virtual_relay.cf
+>server_host = localhost
+>server_port = 389
+>search_base = ou=forwardDomains,dc=testlab,dc=local
+>query_filter = (associatedDomain=%s)
+>result_attribute = associatedDomain
 
 
-Abschließende Tätigkeiten
+#### Abschließende Tätigkeiten
 Konfiguration prüfen und laden
 
 Wurden alle Dateien angelegt muss Postfix neu gestartet bzw. dessen Konfiguration neu geladen werden.
