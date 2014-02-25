@@ -22,11 +22,13 @@ main.cf :
 
 Erstellung der obengenannten Dateien
 
+"To enable saslauthd, edit /etc/default/saslauthd and set START=yes"
+
+include qmail.schema ? (in den Dateien verwendet, sonst nicht nötig)
 ### Aus whisperedshouts.de
 
 
 #### Konfiguration der LDAP Anbindung
-
 Modifikation der /etc/postfix/main.cf
 
 Folgender Abschnitt muss in der main.cf erstellt werden. Einzelheiten zu diesen Optionen erfahren Sie im nächsten Abschnitt, der sich mit der Erstellung der angegebenen Dateien befasst, oder natürlich auf der ensprechenden MAN Page.
@@ -59,7 +61,7 @@ Ist der Wert nicht leer wird die Mail entsprechend weitergeleitet
 
 ##### Inhalt der Datei
 
->#virtual_aliases.cf
+virtual_aliases.cf
 >server_host = localhost
 >server_port = 389
 >search_base = dc=testlab,dc=local
@@ -77,7 +79,7 @@ Ist der Wert nicht leer akzeptiert Postfix Mails für diese Domäne
 
 ##### Inhalt der Datei
 
->#virtual_domains.cf
+virtual_domains.cf
 >server_host = localhost
 >server_port = 389
 >search_base = ou=Domains,dc=testlab,dc=local
@@ -96,7 +98,7 @@ und wurde keine mailForwardingAddress gesetzt wird der Wert des Attributs als Pf
 
 ##### Inhalt der Datei
 
->#virtual_mailboxes.cf
+virtual_mailboxes.cf
 >server_host = localhost
 >server_port = 389
 >search_base = dc=testlab,dc=local
@@ -114,7 +116,7 @@ Gibt den Wert des Attributs qmailUID zurück
 
 ##### Inhalt der Datei
 
->#virtual_uid.cf
+virtual_uid.cf
 >server_host = localhost
 >server_port = 389
 >search_base = dc=testlab,dc=local
@@ -134,7 +136,7 @@ Gibt den Wert des Attributs qmailGID zurück
 
 ##### Inhalt der Datei
 
->#virtual_gid.cf
+virtual_gid.cf
 >server_host = localhost
 >server_port = 389
 >search_base = dc=testlab,dc=local
@@ -154,7 +156,7 @@ Ist der Wert nicht leer verwendet Postfix diese Information für sein Routing.
 
 ##### Inhalt der Datei
 
->#virtual_transport
+virtual_transport
 >server_host = localhost
 >server_port = 389
 >search_base = ou=forwardDomains,dc=testlab,dc=local
@@ -173,7 +175,7 @@ Gibt den Wert des Attributs associatedDomain zurück
 
 ##### Inhalt der Datei
 
->#virtual_relay.cf
+virtual_relay.cf
 >server_host = localhost
 >server_port = 389
 >search_base = ou=forwardDomains,dc=testlab,dc=local
