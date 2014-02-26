@@ -67,7 +67,7 @@ ________________
 
       *19.02.2014* :
 
-	*Zu tun bzw zu untersuchen : Replikation (tutorial auf Youtube), Backup, Notfallplan beim Versagen der Horde-Installation oder des Datenbanks -> mit Team Backup bearbeiten. Proxy-Einstellungen ?*
+	*Zu tun bzw zu untersuchen : Replikation (tutorial auf Youtube), Backup, Notfallplan beim Versagen der Horde-Installation oder des Datenbanks -> mit Team Backup bearbeiten. Proxy-Einstellungen?*
 	
 * Weiteren Datenbank für den Webserver erstellt. Weiterer user (webauftritt) mit dementsprechende Rechte auf den Webserver-Datenbanken. Wikiseite aktualisiert.
 * Beginn einer Wiki-Howto-Seite für LDAP
@@ -81,9 +81,26 @@ ________________
 
 *Mailserver :* Konfiguration absprechen. Verknüpfung von Dovecot(IMAP), Postfix (SMTP), und IMP/Horde, insbesondere in der Benutzerverwaltung. LDAP-Integration von Postfix und Dovecot (erfordet einen zusätzlichen LDAP Server auf dbsvr3). Die Frage des Zugriffs von außen kann durch einen Apache-Proxy https -> http mit Firewall (DMZ) gelöst werden.
 
-*Datenbank-Server :* Sicherheit-Einstellungen und Backup-Plan mit Team Security und Team Backup absprechen. Dementsprechend Replikation und TLS/https/Zertificate recherchieren.
+*Datenbank-Server :* Sicherheit-Einstellungen und Backup-Plan mit Team Security und Team Backup absprechen. Dementsprechend Replikation und TLS/https/Zertifikate recherchieren.
 
 *Howto-Wikiseite:* Fertig schreiben, sobald Thomas mit den php-snippets fertig ist. Ähnliche Seite für SQL?
 
 #### Woche vom 22. bis zum 28. Februar
 
+* Konfiguration des LDAP-Servers
+
+      *25.02.2014* : Bug beim ändern der ACL bei den Server Dateien. Die Maschine wird komplett neu installiert. Vielleicht werden dadurch die Schema Problemen gelöst.
+
+* Aufbau des Verzeichnisses im LDAP-Server
+
+    *25.02.2014* : Neue Anforderungen durch Postfix. Die Flexibilität ist jedoch groß. 
+    
+* Einrichten eines Webmail-Servers mit Horde, Dovecot (IMAP), Postfix (SMTP) auf 192.168.2.27 :
+      
+      *25.02.2014* *: Postfix wurde nach Fehlinstallation von LDAP Modulen neu installiert mit LDAP-Unterstützung. Die Konfiguration wurde bearbeitet und muss noch getestet werden. Postfix admin (php Konfigurationsschnittstelle) wurde installiert, bringt aber nicht viel. Einrichtung der Sicherheit mit SSL/TLS. Zertifikate?*
+      
+      *26.02.2014* *: Neue Parameter für IMP, noch nicht getestet. Beginn Konfiguration von Dovecot.*
+      
+* Einrichten einer Dokumentationsseiten mit wichtigen Konfigurationssdateien auf dbsvr2.
+
+* Planung der Replikationsserver. Zwei weitere Maschinen wurde zur Replikation und Redundanz "bestellt". LDAP Replikation muss noch überlegt werden.

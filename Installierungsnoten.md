@@ -24,7 +24,12 @@ Erstellung der obengenannten Dateien
 
 "To enable saslauthd, edit /etc/default/saslauthd and set START=yes"
 
+edit /etc/default/saslauthd
+
 include qmail.schema ? (in den Dateien verwendet, sonst nicht nötig)
+
+/etc/init.d/postfix restart
+/etc/init.d/saslauthd restart
 ### Aus whisperedshouts.de
 
 
