@@ -1,4 +1,4 @@
-### Tagebuch Projektarbeit Rechenzentrum  
+### Tagebuch Projektarbeit Rechenzentrum  - Pierre Maraval
 
 _________
 
@@ -103,7 +103,7 @@ ________________
       
       *26.02.2014* *: Neue Parameter für IMP, noch nicht getestet. Beginn Konfiguration von Dovecot.*
       
-* Einrichten einer Dokumentationsseiten mit wichtigen Konfigurationssdateien auf dbsvr2.
+* Einrichten einer Dokumentationsseite mit den wichtigen Konfigurationssdateien auf dbsvr2.
 
 * Planung der Replikationsserver. Zwei weitere Maschinen wurde zur Replikation und Redundanz "bestellt". LDAP Replikation muss noch überlegt werden.
 
