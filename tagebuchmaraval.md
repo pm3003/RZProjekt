@@ -87,13 +87,15 @@ ________________
 
 #### Woche vom 22. bis zum 28. Februar
 
-* Konfiguration des LDAP-Servers
+* Neuinstallierung des LDAP-Servers mit besseren Sicherheitseinstellungen.
 
-      *25.02.2014* : Bug beim ändern der ACL bei den Server Dateien. Die Maschine wird komplett neu installiert. Vielleicht werden dadurch die Schema Problemen gelöst.
-
+      *25.02.2014* : Konfigurationsfehler beim Ändern der ACL bei den Server Dateien. Die Maschine wird komplett neu installiert. Vielleicht werden dadurch die Schema Problemen gelöst.
+      
+      *26.02.2014* : Die Neuinstallation hat geklappt. OpenLDAP wurde aus der Quelle kompliert und installiert, ein Skript wurde erstellt, damit es als Service im Background laufen kann, aus /etc/init.d/slapd. Die Schema Problemen wurden gelöst. Die Konfiguration ist nicht fertig, insbesondere müssen die Access Control Regeln wieder eingestellt werden.
+      
 * Aufbau des Verzeichnisses im LDAP-Server
 
-    *25.02.2014* : Neue Anforderungen durch Postfix. Die Flexibilität ist jedoch groß. 
+    *25.02.2014* : Noch nicht möglich. Neue Anforderungen durch Postfix. Die Flexibilität ist jedoch groß. 
     
 * Einrichten eines Webmail-Servers mit Horde, Dovecot (IMAP), Postfix (SMTP) auf 192.168.2.27 :
       
@@ -104,3 +106,6 @@ ________________
 * Einrichten einer Dokumentationsseiten mit wichtigen Konfigurationssdateien auf dbsvr2.
 
 * Planung der Replikationsserver. Zwei weitere Maschinen wurde zur Replikation und Redundanz "bestellt". LDAP Replikation muss noch überlegt werden.
+
+
+      *26.02.2014* *: Zwei Maschinen wurden vom Team Virtualisierung bereitgestellt: dbsvr4 und dbsvr5. Ein SQL-Server wurde auf dbsvr4 eingerichtet. Die Replikation der SQL-Datenbank kann eingerichtet werden.*
