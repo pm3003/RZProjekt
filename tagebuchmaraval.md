@@ -93,9 +93,13 @@ ________________
       
       *26.02.2014* : Die Neuinstallation hat geklappt. OpenLDAP wurde aus der Quelle kompliert und installiert, ein Skript wurde erstellt, damit es als Service im Background laufen kann, aus /etc/init.d/slapd. Die Schema Problemen wurden gelöst. Die Konfiguration ist nicht fertig, insbesondere müssen die Access Control Regeln wieder eingestellt werden.
       
+      *27.02.2014* : Die Access-Control Regeln für den Mailzugang wurden angepasst. Die Anordnung der Regeln hatte vorher nicht gestimmt (spezielle Regeln müssen vor allgemein gültigen Regeln definiert werden).      
+      
 * Aufbau des Verzeichnisses im LDAP-Server
 
     *25.02.2014* : Noch nicht möglich. Neue Anforderungen durch Postfix. Die Flexibilität ist jedoch groß. 
+    
+    *27.02.2014* : Die Struktur ist aufgebaut und erweitert. Für Horde bereit.
     
 * Einrichten eines Webmail-Servers mit Horde, Dovecot (IMAP), Postfix (SMTP) auf 192.168.2.27 :
       
