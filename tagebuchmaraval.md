@@ -93,13 +93,17 @@ ________________
       
       *26.02.2014* : Die Neuinstallation hat geklappt. OpenLDAP wurde aus der Quelle kompliert und installiert, ein Skript wurde erstellt, damit es als Service im Background laufen kann, aus /etc/init.d/slapd. Die Schema Problemen wurden gelöst. Die Konfiguration ist nicht fertig, insbesondere müssen die Access Control Regeln wieder eingestellt werden.
       
-      *27.02.2014* : Die Access-Control Regeln für den Mailzugang wurden angepasst. Die Anordnung der Regeln hatte vorher nicht gestimmt (spezielle Regeln müssen vor allgemein gültigen Regeln definiert werden).      
+      *27.02.2014* : Die Access-Control Regeln für den Mailzugang wurden angepasst. Die Anordnung der Regeln hatte vorher nicht gestimmt (spezielle Regeln müssen vor allgemein gültigen Regeln definiert werden). Der Server läuft wieder.
+      
+* Einrichtung der zentralen LDAP-Authentifizierung bei SAMBA
+     
+     *28.02.2014* : Ein Samba Testserver (dbsvr5, 192.168.2.29) wurde mit LDAP-Authentifizierung installiert. Keine Probleme wurden erkannt, die Verzeichnisstruktur brauchte nicht angepasst werden.
       
 * Aufbau des Verzeichnisses im LDAP-Server
 
     *25.02.2014* : Noch nicht möglich. Neue Anforderungen durch Postfix. Die Flexibilität ist jedoch groß. 
     
-    *27.02.2014* : Die Struktur ist aufgebaut und erweitert. Für Horde bereit.
+    *27.02.2014* : Die Struktur ist aufgebaut und erweitert. Für Horde und bereit.
     
 * Einrichten eines Webmail-Servers mit Horde, Dovecot (IMAP), Postfix (SMTP) auf 192.168.2.27 :
       
@@ -107,7 +111,7 @@ ________________
       
       *26.02.2014* *: Neue Parameter für IMP, noch nicht getestet. Beginn Konfiguration von Dovecot.*
       
-* Einrichten einer Dokumentationsseite mit den wichtigen Konfigurationssdateien auf dbsvr2.
+* Einrichten einer Dokumentationsseite mit den wichtigen Konfigurationssdateien für den verschiedenen Servers auf dbsvr2. Die Dateien wurden auf der Filebox kopiert. 
 
 * Planung der Replikationsserver. Zwei weitere Maschinen wurde zur Replikation und Redundanz "bestellt". LDAP Replikation muss noch überlegt werden.
 
