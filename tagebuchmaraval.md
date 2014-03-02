@@ -63,13 +63,13 @@ ________________
 	Der SMTP Server Sendmail (zu kompliziert zu konfigurieren) wurde durch Postfix als SMTP-Komponent ersetzt. Zwei Hauptprobleme bei der Authentifizierung wurden identifiziert: php Session Handling (von der email team gelöst), und schlechte Einstellung von IMP (webmail-Komponent von Horde), (Lösung gefunden aber noch nicht angewendet).*
       
  
-* **Einrichten eines weiteren Datenbank-Servers auf dbsvr3 zum Testen von Sicherheitsfunktionen.**
+* **Einrichten eines weiteren Datenbank-Servers auf dbsvr5 zum Testen von Sicherheitsfunktionen.**
 
       *19.02.2014* :
 
 	*Zu tun bzw zu untersuchen : Replikation (tutorial auf Youtube), Backup, Notfallplan beim Versagen der Horde-Installation oder des Datenbanks -> mit Team Backup bearbeiten. Proxy-Einstellungen?*
 	
-* **Weiteren Datenbank für den Webserver erstellt. Weiterer user (webauftritt) mit dementsprechende Rechte auf den Webserver-Datenbanken. Wikiseite aktualisiert.**
+* **Weiteren Datenbank für den Webserver erstellt.** Weiterer user (webauftritt) mit dementsprechende Rechte auf den Webserver-Datenbanken. Wikiseite aktualisiert.
 * **Beginn einer Wiki-Howto-Seite für LDAP**
       
       *21.02.2014* *: Teil 1 (LDAP Übersicht) ist fertig, mit einem praktischen Beispiel aus dem HSU-Verzeichnis. Teil 2 und 3 müssen noch geschrieben werden.*
