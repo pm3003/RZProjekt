@@ -35,7 +35,7 @@ _________________
 ________________
 
 #### Woche vom 17. bis zum 22. Februar
-* Konfiguration des LDAP-Servers
+* **Konfiguration des LDAP-Servers**
     
       *17.02.2014* : 
       
@@ -48,8 +48,8 @@ ________________
 	*Access-Control-Regeln wurden angepasst. Thomas Bouchard schreibt die Authentifizierungsschnittstelle (basische Funktionen wie Suche und Prüfung von Benutzernamen hat er schon geschrieben) in der Form von PHP-Snippets. Integration von LDAP und mySQL mit Horde ist erfolgreich, aber nicht abgeschlossen.*
 	
 	*Zu tun : Access-Control-Regeln für bestimmte Benutzer besser anpassen und vielleicht erweitern.*
-* Aufbau des Verzeichnisses im LDAP-Server
-* Einrichten eines Webmail-Servers mit Horde, Dovecot (IMAP), Postfix (SMTP) auf 192.168.2.27 :
+* **Aufbau des Verzeichnisses im LDAP-Server**
+* **Einrichten eines Webmail-Servers mit Horde, Dovecot (IMAP), Postfix (SMTP) auf 192.168.2.27 :**
 
       *19.02.2014* :
 
@@ -63,14 +63,14 @@ ________________
 	Der SMTP Server Sendmail (zu kompliziert zu konfigurieren) wurde durch Postfix als SMTP-Komponent ersetzt. Zwei Hauptprobleme bei der Authentifizierung wurden identifiziert: php Session Handling (von der email team gelöst), und schlechte Einstellung von IMP (webmail-Komponent von Horde), (Lösung gefunden aber noch nicht angewendet).*
       
  
-* Einrichten eines weiteren Datenbank-Servers auf dbsvr3 zum Testen von Sicherheitsfunktionen.
+* **Einrichten eines weiteren Datenbank-Servers auf dbsvr3 zum Testen von Sicherheitsfunktionen.**
 
       *19.02.2014* :
 
 	*Zu tun bzw zu untersuchen : Replikation (tutorial auf Youtube), Backup, Notfallplan beim Versagen der Horde-Installation oder des Datenbanks -> mit Team Backup bearbeiten. Proxy-Einstellungen?*
 	
-* Weiteren Datenbank für den Webserver erstellt. Weiterer user (webauftritt) mit dementsprechende Rechte auf den Webserver-Datenbanken. Wikiseite aktualisiert.
-* Beginn einer Wiki-Howto-Seite für LDAP
+* **Weiteren Datenbank für den Webserver erstellt. Weiterer user (webauftritt) mit dementsprechende Rechte auf den Webserver-Datenbanken. Wikiseite aktualisiert.**
+* **Beginn einer Wiki-Howto-Seite für LDAP**
       
       *21.02.2014* *: Teil 1 (LDAP Übersicht) ist fertig, mit einem praktischen Beispiel aus dem HSU-Verzeichnis. Teil 2 und 3 müssen noch geschrieben werden.*
       
@@ -87,7 +87,7 @@ ________________
 
 #### Woche vom 22. Februar bis zum 02. März
 
-* Neuinstallierung des LDAP-Servers mit besseren Sicherheitseinstellungen.
+* **Neuinstallierung des LDAP-Servers mit besseren Sicherheitseinstellungen.**
 
       *25.02.2014* : Konfigurationsfehler beim Ändern der ACL bei den Server Dateien. Die Maschine wird komplett neu installiert. Vielleicht werden dadurch die Schema Problemen gelöst.
       
@@ -95,11 +95,11 @@ ________________
       
       *27.02.2014* : Die Access-Control Regeln für den Mailzugang wurden angepasst. Die Anordnung der Regeln hatte vorher nicht gestimmt (spezielle Regeln müssen vor allgemein gültigen Regeln definiert werden). Der Server läuft wieder.
       
-* Einrichtung der zentralen LDAP-Authentifizierung bei SAMBA
+* **Einrichtung der zentralen LDAP-Authentifizierung bei SAMBA**
      
      *28.02.2014* : Ein Samba Testserver (dbsvr5, 192.168.2.29) wurde mit LDAP-Authentifizierung installiert. Keine Probleme wurden erkannt, die Verzeichnisstruktur brauchte nicht manuell angepasst zu werden.
       
-* Neuaufbau und Auffüllung des Verzeichnisses im LDAP-Server
+* **Neuaufbau und Auffüllung des Verzeichnisses im LDAP-Server**
 
     *25.02.2014* : Noch nicht möglich. Neue Anforderungen durch Postfix. Die Flexibilität ist jedoch groß. 
     
@@ -107,7 +107,7 @@ ________________
     
     *01.03.2014* : Auffüllung des Verzeichnisses. 
     
-* Einrichten eines Webmail-Servers mit Horde, Dovecot (IMAP), Postfix (SMTP) auf 192.168.2.27 :
+* **Einrichten eines Webmail-Servers mit Horde, Dovecot (IMAP), Postfix (SMTP) auf 192.168.2.27 :**
       
       *25.02.2014* *: Postfix wurde nach Fehlinstallation von LDAP Modulen neu installiert, diesmal mit LDAP-Unterstützung. Die Konfiguration wurde bearbeitet und muss noch getestet werden. Postfix admin (php Konfigurationsschnittstelle) wurde installiert, bringt aber nicht viel. Einrichtung der Sicherheit mit SSL/TLS. Zertifikate?*
       
@@ -121,11 +121,11 @@ ________________
       
       *02.03.2014* *: Konfiguration des IMAP Servers; Konfiguration und Test der Email-Clients (insb. Webmail) für den IMAP und SMTP Server.*
       
-* Einrichten einer Dokumentationsseite mit den wichtigen Konfigurationssdateien für den verschiedenen Servers auf dbsvr2. Die Dateien wurden auf der Filebox kopiert. 
+* **Einrichten einer Dokumentationsseite mit den wichtigen Konfigurationssdateien für den verschiedenen Servers auf dbsvr2. Die Dateien wurden auf der Filebox kopiert.**
 
-* Ausfertigung eines Howto für die Email-Konfiguration.
+* **Ausfertigung eines Howto für die Email-Konfiguration.**
 
-* Planung der Replikationsserver. Zwei weitere Maschinen wurde zur Replikation und Redundanz "bestellt". LDAP Replikation muss noch überlegt werden. 
+* **Planung der Replikationsserver. Zwei weitere Maschinen wurde zur Replikation und Redundanz "bestellt". LDAP Replikation muss noch überlegt werden.**
 
 
       *26.02.2014* *: Zwei Maschinen wurden vom Team Virtualisierung bereitgestellt: dbsvr4 und dbsvr5. Ein SQL-Server wurde auf dbsvr4 eingerichtet. Die Replikation der SQL-Datenbank kann eingerichtet werden.*
