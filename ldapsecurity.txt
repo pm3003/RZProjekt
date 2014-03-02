@@ -1,0 +1,4 @@
+bad security : /var/vmail world writeable
+mailadmin -> create new read user for turba (/turba/config/backends.local.php)
+
+Postfix und Dovecot und horde sind rwx

@@ -85,7 +85,7 @@ ________________
 
 *Howto-Wikiseite:* Fertig schreiben, sobald Thomas mit den php-snippets fertig ist. Ähnliche Seite für SQL?
 
-#### Woche vom 22. bis zum 28. Februar
+#### Woche vom 22. Februar bis zum 02. März
 
 * Neuinstallierung des LDAP-Servers mit besseren Sicherheitseinstellungen.
 
@@ -97,23 +97,45 @@ ________________
       
 * Einrichtung der zentralen LDAP-Authentifizierung bei SAMBA
      
-     *28.02.2014* : Ein Samba Testserver (dbsvr5, 192.168.2.29) wurde mit LDAP-Authentifizierung installiert. Keine Probleme wurden erkannt, die Verzeichnisstruktur brauchte nicht angepasst werden.
+     *28.02.2014* : Ein Samba Testserver (dbsvr5, 192.168.2.29) wurde mit LDAP-Authentifizierung installiert. Keine Probleme wurden erkannt, die Verzeichnisstruktur brauchte nicht manuell angepasst zu werden.
       
-* Aufbau des Verzeichnisses im LDAP-Server
+* Neuaufbau und Auffüllung des Verzeichnisses im LDAP-Server
 
     *25.02.2014* : Noch nicht möglich. Neue Anforderungen durch Postfix. Die Flexibilität ist jedoch groß. 
     
-    *27.02.2014* : Die Struktur ist aufgebaut und erweitert. Für Horde und bereit.
+    *27.02.2014* : Die Struktur ist aufgebaut und erweitert. 
+    
+    *01.03.2014* : Auffüllung des Verzeichnisses. 
     
 * Einrichten eines Webmail-Servers mit Horde, Dovecot (IMAP), Postfix (SMTP) auf 192.168.2.27 :
       
-      *25.02.2014* *: Postfix wurde nach Fehlinstallation von LDAP Modulen neu installiert mit LDAP-Unterstützung. Die Konfiguration wurde bearbeitet und muss noch getestet werden. Postfix admin (php Konfigurationsschnittstelle) wurde installiert, bringt aber nicht viel. Einrichtung der Sicherheit mit SSL/TLS. Zertifikate?*
+      *25.02.2014* *: Postfix wurde nach Fehlinstallation von LDAP Modulen neu installiert, diesmal mit LDAP-Unterstützung. Die Konfiguration wurde bearbeitet und muss noch getestet werden. Postfix admin (php Konfigurationsschnittstelle) wurde installiert, bringt aber nicht viel. Einrichtung der Sicherheit mit SSL/TLS. Zertifikate?*
       
-      *26.02.2014* *: Neue Parameter für IMP, noch nicht getestet. Beginn Konfiguration von Dovecot.*
+      *26.02.2014* *: Neue Parameter für IMP, noch nicht getestet. Basische Konfiguration von Dovecot.*
+      
+      *27.02.2014* *: Konfiguration und debugging von Postfix SMTP Server, insbesondere mit Authentifizierung.*
+      
+      *28.02.2014* *: Konfiguration und debugging der virtuellen Konfiguration (Postfix Mail Transfer Agent, Dovecot LDA). Lösung durch das Ersetzen von Postfix virtual(8) MDA durch  Dovecot LDA (Local Delivery Agent, der auch virtuelle Mailkontos bedienen kann).*
+      
+      *01.03.2014* *: Konfiguration und Debugging von Dovecot IMAP-Server und Dovecot LDA.*
+      
+      *02.03.2014* *: Konfiguration des IMAP Servers; Konfiguration und Test der Email-Clients (insb. Webmail) für den IMAP und SMTP Server.*
       
 * Einrichten einer Dokumentationsseite mit den wichtigen Konfigurationssdateien für den verschiedenen Servers auf dbsvr2. Die Dateien wurden auf der Filebox kopiert. 
 
-* Planung der Replikationsserver. Zwei weitere Maschinen wurde zur Replikation und Redundanz "bestellt". LDAP Replikation muss noch überlegt werden.
+* Ausfertigung eines Howto für die Email-Konfiguration.
+
+* Planung der Replikationsserver. Zwei weitere Maschinen wurde zur Replikation und Redundanz "bestellt". LDAP Replikation muss noch überlegt werden. 
 
 
       *26.02.2014* *: Zwei Maschinen wurden vom Team Virtualisierung bereitgestellt: dbsvr4 und dbsvr5. Ein SQL-Server wurde auf dbsvr4 eingerichtet. Die Replikation der SQL-Datenbank kann eingerichtet werden.*
+      
+**Zu tun : Zusammenfassung** : 
+
+*LDAP :* Zusätzliche Benutzereinstellungen ins LDAP Verzeichnis überführen?
+
+*Mailserver :* Verbesserung der Sicherheitseinstellungen, SASL Authentifizierung mit Team Email absprechen. Replikation auf mailsvr1 ?
+
+*Datenbank-Server :* Replikation einrichten.
+
+#### Woche vom 02. bis zum 07. März
