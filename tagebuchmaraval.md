@@ -138,4 +138,6 @@ ________________
 
 *Datenbank-Server :* Replikation einrichten.
 
+*SAMBA :* Zentrale Authentifizierung einrichten.
+
 #### Woche vom 02. bis zum 07. März
