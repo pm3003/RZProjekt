@@ -85,6 +85,10 @@ ________________
 
 *Howto-Wikiseite:* Fertig schreiben, sobald Thomas mit den php-snippets fertig ist. Ähnliche Seite für SQL?
 
+________________
+
+
+
 #### Woche vom 22. Februar bis zum 02. März
 
 * **Neuinstallierung des LDAP-Servers mit besseren Sicherheitseinstellungen.**
@@ -140,6 +144,9 @@ ________________
 
 *SAMBA :* Zentrale Authentifizierung einrichten.
 
+________________
+
+
 #### Woche vom 02. bis zum 08. März
 
 * **Behebung von Fehlern in der Webmail-Installation**
@@ -152,6 +159,8 @@ ________________
       
       *04.03.2014* *: Das Testsystem läuft, aber der Übergang ins tatsächlichen System ist bis jetzt gescheitert.*
       
+________________
+
 
 #### Woche vom 09. bis zum 15. März
 
@@ -165,3 +174,8 @@ ________________
 * **Untersuchung der Problemen bei Einrichtung der zentralen Authentifizierung mit SAMBA** 
 
       *14.03.2014* *: Möglicher Domain-Kompatibilitätsproblem bei automatisch erzeugter Attributen im LDAP-Verzeichnis.*
+
+      
+________________
+      
+#### Woche vom 16. bis zum 22. März
