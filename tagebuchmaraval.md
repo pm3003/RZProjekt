@@ -140,4 +140,28 @@ ________________
 
 *SAMBA :* Zentrale Authentifizierung einrichten.
 
-#### Woche vom 02. bis zum 07. März
+#### Woche vom 02. bis zum 08. März
+
+* **Behebung von Fehlern in der Webmail-Installation**
+
+* **Dokumentation und Konfigurationssdateien** ordentlich in der Filebox kopiert (Vorschlag des Konfigurationsmanagements). Verweis auf diese Dateien im Wiki.
+
+* **Auffüllung des LDAP-Verzeichnisses** : Weitere Users wurden auf Anfrage mit den entsprechenden Rechte geschafft.
+
+* **Einrichtung der zentralen Authentifizierung bei SAMBA**
+      
+      *04.03.2014* *: Das Testsystem läuft, aber der Übergang ins tatsächlichen System ist bis jetzt gescheitert.*
+      
+
+#### Woche vom 09. bis zum 15. März
+
+* **Vortrag "Civil, military and government datacenters"**
+
+* **Untersuchung und Behebung von einem Fehler in der Rechteverwaltung der Benutzerdatenbank**
+
+      
+      *14.03.2014* *: Lösung gefunden und behoben. Weitere Zugriffsregeln sind nötig, damit der Fehler sich nicht wiederholt.*
+
+* **Untersuchung der Problemen bei Einrichtung der zentralen Authentifizierung mit SAMBA** 
+
+      *14.03.2014* *: Möglicher Domain-Kompatibilitätsproblem bei automatisch erzeugter Attributen im LDAP-Verzeichnis.*
